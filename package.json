@@ -56,6 +56,11 @@
     "@uniswap/v3-core": "^1.0.0",
     "@uniswap/v3-periphery": "^1.1.1",
     "@uniswap/v3-sdk": "^3.7.0",
+
+
+    "@smbswap/sdk-core": "^3.2.2",
+    "@smbswap/v3-sdk": "^3.9.0",
+
     "@zuzu-cat/defira-sdk": "^1.0.0",
     "abi-decoder": "^2.4.0",
     "ajv": "^8.6.3",

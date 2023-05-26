@@ -12,6 +12,7 @@ import { QuickswapConfig } from './quickswap/quickswap.config';
 import { SushiswapConfig } from './sushiswap/sushiswap.config';
 import { TraderjoeConfig } from './traderjoe/traderjoe.config';
 import { UniswapConfig } from './uniswap/uniswap.config';
+import { SMBswapConfig } from './smbswap/smbswap.config';
 import { VVSConfig } from './vvs/vvs.config';
 import { RefConfig } from './ref/ref.config';
 import { PancakeSwapConfig } from './pancakeswap/pancakeswap.config';
@@ -42,6 +43,19 @@ export namespace ConnectorsRoutes {
             ),
             additional_spenders: ['uniswap'],
           },
+          {
+            name: 'smbswap',
+            trading_type: SMBswapConfig.config.tradingTypes('swap'),
+            available_networks: SMBswapConfig.config.availableNetworks,
+          },
+          {
+            name: 'smbswapLP',
+            trading_type: SMBswapConfig.config.tradingTypes('LP'),
+            available_networks: JSON.parse(
+              JSON.stringify(SMBswapConfig.config.availableNetworks)
+            ),
+            additional_spenders: ['uniswap'],
+          },          
           {
             name: 'pangolin',
             trading_type: PangolinConfig.config.tradingTypes,

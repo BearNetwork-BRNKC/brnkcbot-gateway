@@ -6,6 +6,7 @@ import { getEthereumConfig as getBinanceSmartChainConfig } from '../ethereum/eth
 import { Provider } from '@ethersproject/abstract-provider';
 import { Ethereumish } from '../../services/common-interfaces';
 import { PancakeSwapConfig } from '../../connectors/pancakeswap/pancakeswap.config';
+import { SMBswapConfig } from '../../connectors/smbswap/smbswap.config';
 import { SushiswapConfig } from '../../connectors/sushiswap/sushiswap.config';
 import { ConfigManagerV2 } from '../../services/config-manager-v2';
 import { OpenoceanConfig } from '../../connectors/openocean/openocean.config';
@@ -101,6 +102,8 @@ export class BinanceSmartChain extends EthereumBase implements Ethereumish {
         'binance-smart-chain',
         this._chain
       );
+    } else if (reqSpender === 'smbswap') {
+      spender = SMBswapConfig.config.smbswapV3SmartOrderRouterAddress(this._chain);
     } else if (reqSpender === 'openocean') {
       spender = OpenoceanConfig.config.routerAddress('binance-smart-chain', this._chain);
     } else {

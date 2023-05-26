@@ -179,6 +179,7 @@ export type UniswapishAmount =
 
 export type Fractionish =
   | UniswapFraction
+  | SMBswapFraction
   | PangolinFraction
   | QuickswapFraction
   | TraderjoeFraction
