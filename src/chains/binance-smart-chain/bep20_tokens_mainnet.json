@@ -1001,6 +1001,14 @@
       "decimals": 6
     },
     {
+      "name": "BearNetworkChain",
+      "symbol": "BRNKC",
+      "address": "0x2a388e6b2c757C013f7E6DCDDaf701D6c0Af14AE",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://smbswap.finance/images/tokens/0x2a388e6b2c757C013f7E6DCDDaf701D6c0Af14AE.png"
+    },
+    {
       "name": "FIRO Token",
       "symbol": "FIRO",
       "address": "0xd5d0322b6bAb6a762C79f8c81A0B674778E13aeD",
